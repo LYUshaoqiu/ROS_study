@@ -1,0 +1,13 @@
+The main purpose of this repository is to document the problems and reflections I've encountered while learning ROS.
+It will be updated basically every 2 or 3 days.
+
+
+Create a github and synchronize all my related processes and problems encountered on it. If the problem is solved, I'll mark it on the github. 
+This is also a sort of archive, when I search for solutions I find that there is very, very little online and not much data to refer to.
+
+
+本库主要目的是记录我在学习ROS过程中所遇到的问题和反思。
+基本上每2天或3天会更新一次。
+
+建立一个 github，将我所有的相关进程和遇到的问题同步到上面。如果问题解决了，我会在 github 上标记出来。这也算是一个档案库，当我搜索解决方案时，我发现网上的内容非常非常少，可参考的数据也不多。
+万一将来有其他同学想进入 ROS 方向，我做的这个档案也可以作为他们学习的参考。
