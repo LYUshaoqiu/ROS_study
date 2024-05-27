@@ -1,1 +1,91 @@
-11
+Projection Description for ROS Multi-Sensor Data Integration System
+Project Title: 
+Development of a GUI for data collection from mmWave radars, RGB-D camera and wearable devices using robot operating system
+
+Outline:
+Develop a modular and extendible ROS-based system capable of streaming, displaying, and saving data from multiple sensor inputs using various communication protocols including UART and Ethernet. The system will initially focus on integrating data from up to three Nordic Thingy52 wearable devices. The Thingy52 currently transmits IMU data to an nRF5340 Development Kit via Bluetooth Low Energy (BLE). The nRF5340-DK then sends this data to the ROS system via a UART connection. Once you have developed a flexible backend and frontend supporting the Thingy52 stream, you will extend this to data streamed from a Microsoft Kinect Camera and then Texas Instruments mmWave Radar devices. 
+
+Phase 1: Requirement Analysis and System Design
+Objective: Define system requirements and design the overall architecture.
+Description: Understand the system requirements by analysing the smart-cup Python program and discussing with Jonathan and Reza. At the same time you should learn how to use ROS and find out what ROS features you would use in developing this system.
+Milestones:
+1.Identify and document sensor specifications, data formats, and communication protocols for the wearables, camera, and radars.
+2.Define system requirements (e.g using MoSCoW method)
+3.Define system architecture, including data flow and interaction with ROS.
+4.Select development tools and software libraries.
+Deliverables: Requirements document, system design document, selected tools and libraries list.
+
+Phase 2: Development of Abstract Backend Framework
+Objective: Develop abstract and flexible communication, visualization and data storage modules within ROS.
+Description: Develop prototype ROS modules that match the requirements. These modules can be template or ‘placeholder’ data structures and functions that include minimal functionality e.g print statements to simulate the flow of data through the system. Ensure that the framework can be easily extended to support additional sensors and communication protocols. 
+Milestones:
+1.Design and implement a generic (prototype) ROS communication module that could be extended to handle different types of input (e.g. UART, Ethernet, and future protocols)
+2.Design and implement a generic ROS visualization module that could be extended to display sensor data from communication module data streams in real time (e.g visualization of signals on a 2D plot, visualization of video recording in real time, visualization of 3D point cloud)
+3.Design and implement a generic data storage module that could be extended to save data from communication module streams (e.g csv and txt files, MP4 video recordings, raw binary files).
+Deliverables: Prototype ROS program, program documentation
+
+Phase 3: Concrete Implementation of ROS Backend Modules for the Thingy52 Wearable Sensors
+Objective: Implement the communication, visualization, and storage modules for the Thingy52 wearable sensors only. 
+Description: The Nordic Thingy52 devices are currently programmed to send data to the nRF5340-DK via BLE. You will implement a ROS communication module to handle this data stream from the nRF via UART serial connection. You will implement the visualization modules to plot the data coming from the Thingy52 in real-time. You will also implement the storage modules to save this data stream.
+Milestones:
+1.Implement and test communication module for the Thingy52 devices.
+2.Implement and test visualization module for the Thingy52 devices.
+3.Implement and test storage module for the Thingy52 devices.
+Deliverables: Updated ROS program, demonstration testing ROS for the Thing52 stream
+
+Phase 4: Design and Development of Prototype ROS GUI Interface
+Objective: Design the ROS GUI and develop the prototype with a concrete implementation for the Thingy52 stream
+Description: At this stage the ROS backend should be setup to handle the Thingy52 stream, you can now design the frontend GUI. When the design is approved, you will provide concrete implementation of the front end features necessary for the Thingy52 stream.
+Milestones:
+1.ROS GUI designed using your preferred format (e.g paper prototype) 
+2.Develop basic framework for ROS GUI to support multiple different sensors and data streams.
+3.Develop concrete front end features for the Thingy52 stream
+Deliverables: GUI prototype design, updated ROS program with GUI, demonstration
+Phase 5: Concrete Implementation of ROS Backend Modules and Frontend for the Kinect Camera
+
+
+
+ROS 多传感器数据集成系统的投影描述
+项目名称： 
+使用机器人操作系统开发用于从毫米波雷达、RGB-D 摄像头和可穿戴设备收集数据的图形用户界面
+
+项目概要
+开发一个基于 ROS 的模块化可扩展系统，该系统能够使用 UART 和以太网等各种通信协议从多个传感器输入流式传输、显示和保存数据。该系统最初将侧重于整合来自多达三个 Nordic Thingy52 可穿戴设备的数据。Thingy52 目前通过低功耗蓝牙 (BLE) 将 IMU 数据传输到 nRF5340 开发套件。然后，nRF5340-DK 通过 UART 连接将数据发送到 ROS 系统。开发出支持 Thingy52 数据流的灵活后端和前端后，您将把它扩展到来自 Microsoft Kinect 摄像机和德州仪器毫米波雷达设备的数据流。
+
+第 1 阶段：需求分析和系统设计
+目标： 确定系统要求并设计整体架构。
+说明： 通过分析智能杯 Python 程序并与乔纳森和雷扎讨论，了解系统需求。同时，您应该学习如何使用 ROS，并找出在开发该系统时您将使用的 ROS 功能。
+里程碑
+1.确定并记录可穿戴设备、摄像头和雷达的传感器规格、数据格式和通信协议。
+2.定义系统要求（例如使用 MoSCoW 方法）
+3.定义系统架构，包括数据流和与 ROS 的交互。
+4.选择开发工具和软件库。
+交付成果： 需求文件、系统设计文件、所选工具和软件库清单。
+
+第 2 阶段：开发抽象后端框架
+目标： 在 ROS 中开发抽象灵活的通信、可视化和数据存储模块。
+说明： 开发符合要求的 ROS 模块原型。这些模块可以是模板或 “占位符 ”数据结构和函数，包括最基本的功能，如打印语句，以模拟系统中的数据流。确保该框架可轻松扩展，以支持更多传感器和通信协议。
+里程碑
+1.设计并实现一个通用（原型）ROS 通信模块，该模块可扩展以处理不同类型的输入（如 UART、以太网和未来的协议）
+2.设计并实现一个通用的 ROS 可视化模块，该模块可扩展用于实时显示来自通信模块数据流的传感器数据（例如，二维图上信号的可视化、实时视频录制的可视化、三维点云的可视化）
+3.设计并实施一个通用数据存储模块，该模块可扩展用于保存来自通信模块数据流的数据（例如 csv 和 txt 文件、MP4 视频记录、原始二进制文件）。
+交付成果： ROS 程序原型、程序文档
+
+第 3 阶段：为 Thingy52 可穿戴传感器具体实施 ROS 后端模块
+目标：实现通信、可视化和存储： 仅为 Thingy52 可穿戴传感器实施通信、可视化和存储模块。
+说明 Nordic Thingy52 设备目前通过 BLE 向 nRF5340-DK 发送数据。您将实施一个 ROS 通信模块，通过 UART 串行连接处理来自 nRF 的数据流。您将实现可视化模块，实时绘制来自 Thingy52 的数据。您还将实现存储模块，以保存该数据流。
+里程碑
+1.为 Thingy52 设备实施并测试通信模块。
+2.实现并测试 Thingy52 设备的可视化模块。
+3.为 Thingy52 设备实施并测试存储模块。
+交付成果： 更新 ROS 程序，为 Thing52 数据流演示测试 ROS
+
+第 4 阶段：设计和开发 ROS 图形用户界面原型
+目标： 为 Thingy52 数据流设计 ROS 图形用户界面并开发具体实施的原型。
+说明： 在此阶段，应设置 ROS 后端来处理 Thingy52 数据流，现在您可以设计前端图形用户界面。设计通过后，您将提供 Thingy52 数据流所需的前端功能的具体实现。
+里程碑
+1.使用您喜欢的格式设计 ROS 图形用户界面（如纸质原型） 
+2.开发 ROS 图形用户界面的基本框架，以支持多个不同的传感器和数据流。
+3.为 Thingy52 数据流开发具体的前端功能
+交付成果： 图形用户界面原型设计、带有图形用户界面的最新 ROS 程序、演示
+第 5 阶段：ROS 后端模块和 Kinect 摄像机前端的具体实施
