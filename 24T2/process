@@ -1,0 +1,25 @@
+2024/5/31 week1 and oweek
+I started the first week by roughly following the
+“http://www.autolabor.com.cn/book/ROSTutorials/chapter1/11-rosjian-jie-yu-an-zhuang/111rosgai-nian.html"
+website to get the environment setup and infrastructure built in the manner given.
+
+The version I used was
+
+During the installation of the environment I encountered a major problem, the problem came from the communication between the virtual machine and itself. 
+During my testing I found that he could access localhost, but he was never able to access 127.0.1.1. This value is used as the target value for virtual communication. 
+In the system testing of ROS, I think it is currently constructed with two objects, one object is the host local house and one object is the receiver. 
+The host local house is the local house receiver which is the 127.0.1.1 command object. The naming I set for him here is 1111.
+In my pre-testing, I realized that he has not been able to connect to 1111, which made me feel very strange, I used many methods and checked its related configuration files, but it never worked. 
+Until I used this one command, if I remember correctly.
+
+export ROS_MASTER_URI=http://localhost:11311
+
+Here's the answer from querying the web
+The ROS Master provides name registration and lookup to the rest of the nodes in the ROS network. 
+By setting this environment variable, all ROS nodes By setting this environment variable, all ROS nodes started in this terminal session will know that they should connect to the ROS Master running at http://localhost:11311.
+
+Key Points about ROS_MASTER_URI.
+URL Format: The URI should be in the format http://hostname:port, where hostname is the name or IP address of the machine where the master is running, and port is the port on which it is listening.
+Default Setting: The default port for the ROS Master is 11311, and often localhost is used when the master is running on the same machine as the nodes.
+Purpose: This setting is crucial for multi-machine setups in ROS, where nodes might be distributed across different computers. 
+It ensures that all nodes can communicate through a central hub, the centralized hub, and the centralized hub can be used by all nodes. It ensures that all nodes can communicate through a central hub, the ROS Master.
