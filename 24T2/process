@@ -3,7 +3,7 @@ I started the first week by roughly following the
 “http://www.autolabor.com.cn/book/ROSTutorials/chapter1/11-rosjian-jie-yu-an-zhuang/111rosgai-nian.html"
 website to get the environment setup and infrastructure built in the manner given.
 
-The version I used was
+The version I used was————ROS Noetic Ninjemys
 
 During the installation of the environment I encountered a major problem, the problem came from the communication between the virtual machine and itself. 
 During my testing I found that he could access localhost, but he was never able to access 127.0.1.1. This value is used as the target value for virtual communication. 
