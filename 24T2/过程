@@ -1,0 +1,17 @@
+2024/5/31  week1 and oweek
+第一周我首先大致跟随了  “http://www.autolabor.com.cn/book/ROSTutorials/chapter1/11-rosjian-jie-yu-an-zhuang/111rosgai-nian.html” 网站所给出的方式，完成了环境设置和基础结构搭建。
+
+我使用的版本是
+
+在安装环境的过程中，我遇到了一个主要的问题，问题来自于虚拟机和本身的通讯。我在测试的过程中发现他可以访问localhost，但是他一直无法访问127.0.1.1。这个值是用来作为虚拟通信的目标值的。在ROS的系统测试中，我认为目前它是构建了两个对象，一个对象是机主本机，一个对象是接收机。机主本机是local house的接收机就是127.0.1.1的指令对象。我在这里给他设置的命名是1111。
+在我的前期测试中，我发现他一直无法连上1111，这让我感觉非常奇怪，我使用了很多方法，检查了它相关的配置文件，但是一直没有作用。直到我使用了这一个命令，如果我没有记错的话。
+
+export ROS_MASTER_URI=http://localhost:11311
+
+以下是查询网络的回答
+The ROS Master provides name registration and lookup to the rest of the nodes in the ROS network. By setting this environment variable, all ROS nodes started in this terminal session will know that they should connect to the ROS Master running at http://localhost:11311.
+
+Key Points about ROS_MASTER_URI:
+URL Format: The URI should be in the format http://hostname:port, where hostname is the name or IP address of the machine where the master is running, and port is the port on which it is listening.
+Default Setting: The default port for the ROS Master is 11311, and often localhost is used when the master is running on the same machine as the nodes.
+Purpose: This setting is crucial for multi-machine setups in ROS, where nodes might be distributed across different computers. It ensures that all nodes can communicate through a central hub, the ROS Master.
