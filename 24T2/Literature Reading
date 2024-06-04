@@ -1,0 +1,19 @@
+“刘光印,钱东海,肖子鸣,等. 基于ROS架构的叉车型AGV控制系统设计开发研究 [J]. 自动化与仪表, 2024, 39 (05): 34-39. DOI:10.19557/j.cnki.1001-9944.2024.05.008.”
+LIU Guangyin,QIAN Donghai,XIAO Ziming,et al. Design and development of forklift AGV control system based on ROS architecture [J]. Automation and Instrumentation, 2024, 39 (05): 34-39. DOI:10.19557/j.cnki.1001-9944.2024.05.008.
+
+这篇文章使用的版本是ROS-Noetic。基于（ROS），设计了一套新的控制系统。 
+该控制系统采用双层控制架构，通过模块化的设计思想实现了控制平台的搭建。
+上层控制器采用装有Linux操作系统和ROS的嵌入式工控机实现叉车型AGV的即时定位与建图（SLAM）及路径跟踪功能。
+下层控制器采用西门子PLC实现对I/O信号的采集，实现多种控制与监测。
+
+本文在ROS方向介绍了ROS 的定位及导航控制软件实现
+节点是ROS系统的基本执行单元，通过TOPIC 和 SERVICE 通信
+
+本文将其分为分为系统层和应用层。 系统层包括 Linux 操作系统和其上安装的 ROS 机器人操作系统，负责整个软件系统的管理和协调。 
+应用层位于系统层之上，负责根据接收到的信息和用户的要求实现具体的应用。 
+应用层包含多个任务节点，每个节点负责实现不同的功能。
+
+
+
+
+
