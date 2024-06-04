@@ -26,3 +26,20 @@ This week's schedule
 Read ROS-related literature and continue to advance my learning based on the program itself. I will look for and read ROS related papers. 
 At the same time, I will organize and prepare them. Organize reading notes and thoughts on github.
 
+2024/6/10-16 week3
+Try out ROS on a specific hardware model. At the same time, I will continue to read related papers. Prepare for the project report later on.
+
+2024/6/17 - 7/7 week4-6
+
+Basically complete the pre-validation work. Achieve the following goals.
+
+Description: Understand the system requirements by analysing the smart-cup Python program and discussing with Jonathan and Reza. 
+At the same time you should learn how to use ROS and find out what ROS features you would use in developing this system.
+Milestones:
+1.Identify and document sensor specifications, data formats, and communication protocols for the wearables, camera, and radars.
+2.Define system requirements (e.g using MoSCoW method)
+3.Define system architecture, including data flow and interaction with ROS.
+4.Select development tools and software libraries.
+Deliverables: Requirements document, system design document, selected tools and libraries list.
+
+Do as much as possible by week 7 to have the appropriate materials ready for the opening paper in week 8.
