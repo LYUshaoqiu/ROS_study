@@ -1,16 +1,29 @@
-在选型面前，有几个考虑
-1，硬件设备支持哪个版本？
-2，版本发展性与潜能的考虑
+2024/5/23-6/1 oweek week1
 
-版本
-ROS Noetic Ninjemys:
-适合传统ROS 1项目。
-支持Ubuntu 20.04 LTS。
-rosserial等工具库成熟，社区支持良好。
+Before selecting a model, there are several considerations
+1, which version is supported by the hardware device?
+2, Consideration of version evolvability and potential
+First I need to determine what version and environment I am using.
 
-ROS 2 Foxy Fitzroy:
-LTS版本，支持到2023年。
-适合对未来扩展性和性能有更高要求的项目。
-支持Ubuntu 20.04 LTS。
-提供现代化的架构和中间件支持。
+Versions
+ROS Noetic Ninjemys.
+Suitable for legacy ROS 1 projects.
+Supports Ubuntu 20.04 LTS.
+Mature tool libraries such as rosserial and good community support.
 
+ROS 2 Foxy Fitzroy.
+LTS version, supported until 2023.
+Suitable for projects with higher requirements for future scalability and performance.
+Supports Ubuntu 20.04 LTS.
+Provides modernized architecture and middleware support.
+
+Here I'll start with Ros1, the 1st version, and later on I'll put ROS2 into a comprehensive evaluation and consideration as the case may be. 
+I will also take a stab at version 2, but I'll use version 1 as a baseline for now
+
+
+2024/6/3-9 week2
+This week's schedule
+Read ROS-related literature and continue to advance my learning based on the program itself. I will look for and read ROS related papers. 
+At the same time, I will organize and prepare them. Organize reading notes and thoughts on github.
+
+Translated with DeepL.com (free version)
