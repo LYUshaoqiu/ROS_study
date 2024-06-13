@@ -39,5 +39,14 @@ The functional nodes contained in the information acquisition, application algor
 “基于 ROS 的 AGV 控制程序设计通过将激光雷达、编码器、IMU 生成的数据分别封装在不同的功能节点中，并以话题的形式发布出来，再由其它节点订阅该话题。 
 多个节点可以根据功能需求封装为不同的功能包，实现其各自的功能。 信息采集、应用算法和驱动控制模块所包含的功能节点可以用 xml语言编写相应的 launch 启动文件，再通过 roslaunch命令实现多个节点的同时启动。”
 
+Y. Rong, Y. Zhang, G. Liu, Y. Wang and P. Wang, "Implementation of Pedestrian Detection Algorithm Based on Improved Yolov3-Tiny in ROS Framework," 2022 6th International Conference on Robotics and Automation Sciences (ICRAS), Wuhan, China, 2022, pp. 242-246, doi: 10.1109/ICRAS55217.2022.9842037.
+keywords: {Automation;Heuristic algorithms;Real-time systems;Data models;Mobile robots;Detection algorithms;Yolov3-Tiny;pedestrian;detection;multi-scale fusion;ROS},
 
+This article focuses on the use of the YOLO V3 visual recognition algorithm on a robotic platform for working with operations. Their platform is based on the ROS system and the authors emphasize the beneficial aspects of the ROS framework for their visual implementation. 
+In particular, it explains that "the ROS-based Darknet_ros feature package allows for the detection of pedestrian targets in complex scenes, with a relatively low leakage rate for the detection of pedestrian heads and shoulders"
+
+这篇文章主要讲述了在机器人平台上使用YOLO V3 视觉识别算法来进行工作的操作。其中他们的平台是基于ROS系统的，作者强调了ROS框架对于其视觉实现的有利方面。尤其说明了“基于ROS的Darknet_ros功能包可以在复杂场景中检测出行人目标，对行人头部、肩部的检测相对降低了漏检率”
+
+
+ Cui Yufan and Niu Zijie, "Simulation and Implementation of SLAM Drawing Based on ROS Wheeled Mobile Robot[J]", Journal of Physics: Conference Series, vol. 1865, no. 4, 2021.
 
