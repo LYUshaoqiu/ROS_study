@@ -52,11 +52,17 @@ In particular, it explains that "the ROS-based Darknet_ros feature package allow
 
 
 
-  Calvo-Fullana, M, Mox, D, Pyattaev, A, Fink, J, Kumar, V & Ribeiro, A 2021, ‘ROS-NetSim: A Framework for the Integration of Robotic and Network Simulators’, arXiv.org.
+  Calvo-Fullana, M, Mox, D, Pyattaev, A, Fink, J, Kumar, V & Ribeiro, A 2021, ‘ROS-NetSim: A Framework for the Integration of Robotic and Network Simulators’, arXiv.org.---------------------------------------------------------This article is more important
 
 
+This article describes a tool called ROS-NetSim, which integrates robotics and network simulators through a ROS interface, and is designed to simulate Perception-Action-Communication (PAC) loops in multi-robot systems in a high-fidelity manner.
+ROS-NetSim is lightweight, modular, and adaptable, and is able to work with a wide range of existing network and physical simulators. 
+The article describes in detail the architecture of ROS-NetSim, including how the physical and network coordinators work, and demonstrates its application to a UAV patrol mission, with experimental results proving the system's impact on communication performance under different environmental conditions. 
+The advantages of ROS-NetSim in terms of flexibility and transparency are summarized, and its potential extended applications in multi-host ROS systems and ROS2 are discussed.
 
 
+这篇文章介绍了一种名为ROS-NetSim的工具，它通过ROS接口集成机器人和网络仿真器，旨在高保真地模拟多机器人系统中的感知-动作-通信（PAC）环路。ROS-NetSim具有轻量、模块化和适应性强的特点，能够与多种现有的网络和物理仿真器兼容。
+文章详细描述了ROS-NetSim的架构，包括物理协调器和网络协调器如何工作，并展示了其在无人机巡逻任务中的应用，通过实验结果证明了该系统在不同环境条件下对通信性能的影响。总结了ROS-NetSim在灵活性和透明性方面的优势，并讨论了其在多主机ROS系统和ROS2中的潜在扩展应用。
 
 
 
