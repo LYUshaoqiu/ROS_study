@@ -14,6 +14,44 @@ Until I used this one command, if I remember correctly.
 
 export ROS_MASTER_URI=http://localhost:11311
 
+---------------------------------------------------------------------------i have find the real question---------------------------------------------------
+
+Thanks for providing the IP address from your hostname -I command. The IP address 10.0.2.15 is the actual address of your machine on the network.
+
+Here are the steps to correct the ROS configuration using this IP:
+
+Set the ROS Environment Variables:
+
+You should set the ROS_MASTER_URI to use this IP address. In your terminal, type the following command:
+export ROS_MASTER_URI=http://10.0.2.15:11311
+
+Edit /etc/hosts File:
+
+It's important to ensure that any hostname used in your ROS configuration correctly maps to an IP address in your /etc/hosts file. 
+If you've been trying to use 1111 as a hostname, make sure it points to 10.0.2.15, like this:
+127.0.0.1    localhost
+10.0.2.15    1111
+
+Verify ROS_HOSTNAME or ROS_IP:
+
+Depending on your setup, you might also need to set ROS_HOSTNAME or ROS_IP. Since you have the IP, you can set ROS_IP:
+export ROS_IP=10.0.2.15
+
+Restart ROS:
+
+After setting these environment variables, restart ROS to apply the new settings.
+Test the Configuration:
+
+Test if the ROS master can now be contacted by starting roscore again. 
+Additionally, you can test the network communication by pinging 10.0.2.15 or using rosnode list to see if nodes are correctly registering with the master.
+These changes should help ensure that your ROS system correctly recognizes and communicates within its network environment. 
+If there are still issues, make sure there are no firewall rules blocking the ROS communication ports, typically around 11311.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Here's the answer from querying the web
 The ROS Master provides name registration and lookup to the rest of the nodes in the ROS network. 
 By setting this environment variable, all ROS nodes By setting this environment variable, all ROS nodes started in this terminal session will know that they should connect to the ROS Master running at http://localhost:11311.
