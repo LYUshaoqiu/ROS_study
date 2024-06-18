@@ -71,6 +71,15 @@ I managed to write a small program using cpp from ros.
 2024/6/19 week 4
 Installation and setup of the ros tool environment is basically complete.
 
+The following learning objectives are expected to be achieved this week.
+
+Be able to skillfully introduce the commonly used communication mechanisms in ROS.
+Be able to understand the theoretical model of each communication mechanism in ROS.
+Be able to realize the cases corresponding to each communication mechanism by code.
+Be able to skillfully use some operation commands in ROS.
+Be able to independently complete related practical cases
+
+Translated with DeepL.com (free version)
 
 
 
