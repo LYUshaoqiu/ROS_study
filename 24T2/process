@@ -14,7 +14,7 @@ Until I used this one command, if I remember correctly.
 
 export ROS_MASTER_URI=http://localhost:11311
 
----------------------------------------------------------------------------i have find the real question---------------------------------------------------
+---------------------------------------------------------------------------i have find the question---------------------------------------------------before/not real
 
 Thanks for providing the IP address from your hostname -I command. The IP address 10.0.2.15 is the actual address of your machine on the network.
 
@@ -79,6 +79,42 @@ Be able to realize the cases corresponding to each communication mechanism by co
 Be able to skillfully use some operation commands in ROS.
 Be able to independently complete related practical cases
 
+-----------------------------------------------------------------------------------2024/6/20
+I finally figured out what his problem was. 
+It had to do with the ip settings of a couple of his environment variables. 
+The core problem is that the iOS get ip and pass out ip must be set correctly.
+Previously my settings were short term settings that didn't solve the underlying problem, poor this bug would keep recurring . Now I found his real reason.
+
+1,check your ip
+
+hostname -I
+
+2,check 2 ip"localhost" and "1111/or other your set"
+check /etc/hosts
+
+sudo nano /etc/hosts
+
+3, set the same ip with your own ip
+
+4,run the new set
+source ~/.bashrc
+
+then-----
+
+Configure ROS environment variables:
+
+Add the following line to the ~/.bashrc file to ensure that ROS uses the correct IP address for communication:
+
+export ROS_IP=10.0.2.15
+export ROS_MASTER_URI=http://10.0.2.15:11311
+
+(which you set before)
+
+run the new set
+source ~/.bashrc
+
+it can work now
+-----------------------------------------------------------------------------------------------------------------
 
 
 
