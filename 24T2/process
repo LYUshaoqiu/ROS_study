@@ -14,7 +14,7 @@ Until I used this one command, if I remember correctly.
 
 export ROS_MASTER_URI=http://localhost:11311
 
----------------------------------------------------------------------------i have find the question---------------------------------------------------before/not real
+------------------------------------------------------------i have find the question---------------------------------------------------before/not real
 
 Thanks for providing the IP address from your hostname -I command. The IP address 10.0.2.15 is the actual address of your machine on the network.
 
